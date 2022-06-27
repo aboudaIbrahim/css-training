@@ -1,0 +1,432 @@
+:root {
+  --black: #333333;
+  --red: #c1272d;
+  --shaded-red: #df9595;
+  --green: #00751f;
+  --white: #ffffff;
+  --twhite: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: verdana, Arial, Helvetica, sans-serif;
+  color: var(--black);
+  font-size: 1rem ;
+}
+#mainHeader {
+  background-color: var(--red);
+  height:40px;
+  position: fixed;
+  width: 100%;
+  top: 0; 
+  display: grid; 
+  grid-template-columns: 80px 1fr 40px;
+  
+}
+#mainNav {
+  background-color: var(--red);
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  padding-bottom: 5px;
+  display: none;
+ 
+} 
+#mainNav p { 
+  display: none;
+}
+#mainNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+  display: flex; 
+  flex-direction: column;
+}
+#mainHeader > h1 {
+  color: var(--white);
+  font-weight: normal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  font-size: 1.2em;
+  font-style:italic;
+  width:1fr;
+  display: flex; 
+  align-items: center; 
+  height:40px ;
+  margin-top: 0px;
+  
+}
+#pageContent.text h1 {
+  font-size: 1.8em;
+  color: var(--red);
+  letter-spacing: 0.1em;
+}
+#pageContent.text h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  margin-top: 50px;
+} 
+#pageContent.text .alignLeft{ 
+  float: left;
+}
+#pageContent.text img {
+  max-width: 100%;
+  height: auto;
+}
+#pageContent.text dl {
+  border: 1px solid var(--black);
+  border-radius: 10px;
+  background-color: var(--white);
+  padding: 20px;
+  color: var(--black);
+}
+#pageContent.text dl dt {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+#pageContent.text dl dd {
+  margin: 10px 0 10px 20px;
+}
+#mainNav h1 {
+  display: none;
+}
+
+#mainNav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  padding-left: 90px;
+}
+#mainNav a:hover {
+  color: var(--shaded-red);
+}
+#mainFooter {
+  background-color: var(--red);
+  font-size: 0.7em;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  bottom: 0; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  
+} 
+
+
+#pageContent {
+  background-image: url(/images/image-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+#logoImg {
+  width: 80px;
+  padding: 5px;
+  position: relative;
+  z-index: 1000;
+}
+.accessibility {
+  position: absolute;
+  left: -15000px;
+}
+
+main {
+  background-color: var(--twhite);
+  padding: 20px;
+}
+
+#pageContent.galleries ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid; 
+  grid-gap: 20px;
+}
+
+#pageContent.galleries ul li {
+  background-color: var(--white);
+  padding: 10px;
+}
+
+#pageContent.galleries ul li a {
+  background-color: var(--black);
+  text-decoration: none;
+}
+
+#pageContent.galleries ul li:hover {
+  background-color: var(--shaded-red);
+}
+#pageContent.contact form {
+  border-top: solid 1px var(--red);
+  margin-top: 5px; 
+  display: grid; 
+
+}
+#pageContent.contact form > div > div {
+  display: grid;
+  margin: 20px 0px;
+  width: 45%; 
+  display: flex; 
+  flex-direction: column;
+}
+
+#pageContent.contact form label {
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+
+#pageContent.contact form textarea {
+  resize: none;
+  height: 150px;
+}
+#pageContent.contact form button {
+  border-radius: 10px;
+  background-color: var(--red);
+  padding: 20px;
+  border: none;
+  margin-top: 13px;
+}
+
+#pageContent.contact form button:hover {
+  background-color: var(--shaded-red);
+}
+#pageContent.contact form button:active {
+  background-color: var(--red);
+}
+#pageContent.blogList #leftCol{ 
+  display: grid; 
+  grid-gap: 20px;
+}
+#pageContent.blogList #leftCol article {
+  padding: 20px;
+}
+#pageContent.blogList #leftCol article :first-child() {
+  background-color: var(--shaded-red);
+}
+#pageContent.blogList #leftCol article header {
+  border-bottom: 1px solid var(--black);
+}
+#pageContent.blogList #leftCol article header h1 {
+  margin: 0;
+  color: var(--green);
+  font-size: 1.3em;
+}
+#pageContent.blogList #leftCol article header p {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 1;
+}
+
+#pageContent.blogList #leftCol article a {
+  color: var(--red);
+  text-decoration: none;
+}
+#pageContent.blogList #leftCol article a:hover {
+  text-decoration: underline;
+}
+#pageContent.blogList #leftCol article:nth-child(odd) {
+  background-color: var(--shaded-red);
+}
+#pageContent.blogList #leftCol article:nth-child(even) {
+  background-color: var(--white);
+}
+
+#pageContent.blog #rightCol {
+  background-color: var(--red);
+  padding: 20px;
+}
+
+#pageContent.blog #rightCol section {
+  border-bottom: 1px var(--white) solid;
+  padding-bottom: 20px;
+}
+#pageContent.blog #rightCol section > h1 {
+  color: var(--white);
+  font-size: 1.3em;
+}
+#pageContent.blog #rightCol section input {
+  border-radius: 10px;
+  width: 100%;
+}
+
+#pageContent.blog #rightCol section ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+#pageContent.blog #rightCol section ul li,
+#pageContent.blog #rightCol section h2 {
+  background-color: var(--white);
+}
+#pageContent.blog #rightCol section ul li:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+#pageContent.blog #rightCol section ul li:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+#pageContent.blog #rightCol ul li a,
+#pageContent.blog #rightCol h2 a {
+  text-decoration: none;
+  padding: 8px;
+  color: var(--black);
+  display: flex; 
+  justify-content: space-between;
+}
+
+#pageContent.blog #rightCol ul li a span,
+#pageContent.blog #rightCol h2 span {
+  width: 25%;
+  height: 25%;
+  font-size: 12px;
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+#pageContent.blog #rightCol ul li a:hover,
+#pageContent.blog #rightCol h2 a:hover {
+  color: var(--shaded-red);
+}
+
+#pageContent.blog #rightCol ul li a:hover span,
+#pageContent.blog #rightCol h2 a:hover span {
+  background-color: var(--white);
+  color: var(--red);
+}
+
+#pageContent.blog #rightCol ul li:first-child,
+#pageContent.blog #rightCol ul li a:hover {
+  border-radius: 10px 10px 0 0;
+}
+
+#pageContent.blog #rightCol ul li:last-child,
+#pageContent.blog #rightCol ul li a:hover {
+  border-radius: 0 0 10px 10px;
+}
+
+#pageContent.blog #rightCol h2 {
+  border-radius: 10px;
+}
+
+/* #menuToggle{ 
+  width: 40px; 
+  height: 40px; 
+  background-color:transparent; 
+  border: none; 
+  margin-top:3px; 
+  margin-left: 1440px ;
+  position: relative; 
+  z-index: 30000;
+
+} */
+
+@media screen and (min-width : 786px) {
+   #menuToggle{ 
+    display: none;
+   }
+   #mainHeader{ 
+    grid-template-columns: 80px 250px 1fr;
+   } 
+   #pageContent.galleries ul{ 
+    grid-template-columns: 1fr 1fr;
+   }
+   #mainNav{ 
+    position:static; 
+    height: 40px;
+    display: block;
+   }  
+   #mainNav ul{ 
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 40px;
+   }   
+   #mainNav a{ 
+     font-size: 1.2em; 
+     padding: 0px 10px;
+   }
+}  
+@media screen and (min-width : 1024px) {
+  #mainHeader{ 
+   grid-template-columns: 80px 300px 1fr;
+  } 
+  #pageContent.galleries ul{ 
+    grid-template-columns: 1fr 1fr 1fr;
+  } 
+  #pageContent.twoCols { 
+    grid-template-columns: 2fr 1fr  ;
+  }
+  #pageContent.contact form{ 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px;
+  }
+  #pageContent.contact form button{ 
+    grid-column: span 2;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #pageContent.galleries ul{ 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #pageContent.twoCols { 
+    grid-template-columns: 3fr 1fr  ;
+  }
+}
+
+#menuToggle {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+} 
+
+#pageContent.twoCols { 
+  display: grid; 
+  grid-gap: 20px;
+}
+
+#pageContent.home{ 
+  display: flex;
+  justify-content: center; 
+  align-items: flex-end;
+} 
+#pageContent.home #pictInfo{ 
+  background-color: var(--twhite); 
+  padding: 40px; 
+  width: 300px;
+  height: 300px;  
+  display: flex; 
+  flex-flow: column nowrap; 
+  justify-content: flex-end;
+} 
+#pageContent.home #pictInfo h1{ 
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 1.2em; 
+  margin: 10px 0;
+  color: var(--red);
+} 
+#pageContent.home #pictInfo p { 
+  margin : 10px 0px ;  
+  font-size: .8em;
+}
